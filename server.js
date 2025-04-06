@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Load words
-app.get('/api/words', (req, res) => {
+app.get('api/words', (req, res) => {
   fs.readFile(wordsFile, 'utf8', (err, data) => {
     if (err) return res.status(500).send('Error reading words');
     res.json(JSON.parse(data || '[]'));
@@ -19,7 +19,7 @@ app.get('/api/words', (req, res) => {
 });
 
 // Save new word
-app.post('/api/words', (req, res) => {
+app.post('api/words', (req, res) => {
   const newWord = req.body;
   fs.readFile(wordsFile, 'utf8', (err, data) => {
     const words = err ? [] : JSON.parse(data || '[]');
