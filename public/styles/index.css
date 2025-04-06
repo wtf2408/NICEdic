@@ -1,0 +1,170 @@
+/* Общий стиль темной темы */
+body {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden; /* убираем прокрутку окна */
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+}
+
+h1, h4 {
+  color: #ffffff;
+}
+h1 i, h2 i, h3 i {
+  font-size: 0.9em;
+  padding-left: 6px;
+}
+/* Карточка формы */
+.card {
+  background-color: #1f1f1f;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  margin-bottom: 16px;
+}
+
+/* Инпуты */
+input.form-control {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease;
+}
+
+input.form-control:focus {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #888;
+  outline: none;
+  box-shadow: none;
+}
+input.form-control::placeholder {
+  color: #bbb;
+  opacity: 1; /* Убедимся, что placeholder не полупрозрачный */
+}
+
+
+
+.btn {
+  border-radius: 8px;
+}
+
+/* Кнопка добавления */
+.btn-success {
+  background-color: #4caf50;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #4caf50;
+
+  border: none;
+}
+
+/* Контейнер со словами */
+.words-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Слово */
+.word-card {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.word-card .eng {
+  font-weight: 600;
+  color: #fff;
+}
+
+.word-card .trans {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.word-card .trans.revealed {
+  filter: blur(0);
+  color: #fff;
+}
+
+/* Кнопка теста */
+a.btn-primary.mt-3 {
+  align-self: flex-start;
+}
+
+#test-scroll-wrapper {
+  max-height: 65vh;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border: none;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+input.form-control {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease;
+}
+
+input.form-control:focus {
+  border-color: #888;
+  background-color: #2a2a2a;
+  color: #fff;
+  outline: none;
+}
+
+input.form-control::placeholder {
+  color: #bbb;
+  opacity: 1;
+}
+
+button.btn-success {
+  white-space: nowrap;
+}
+
+
+.card-word {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.card-word.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
